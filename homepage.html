@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YOGA-Hithyoga</title>
+		<!--Boostrap CDN-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!--end-->
+		<!--stylesheet-->
+			<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<!--end-->
+		<!--fontawsome CDN-->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!--end-->
+		<!--goggle map API-->
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFuUZFW4QlYpXAXTQJAXanS9lVrFeCmGw&callback=initMap"></script>
+		<!--end-->
+	<script>
+		var labels = 'Sarita Vihar';
+      	var labelIndex = 0;
+	      function initMap() {
+	      	var Sarita= {lat: 28.64399, lng: 77.091};
+	        var mapDiv = document.getElementById('map');
+	        var map = new google.maps.Map(mapDiv, {
+	            center: Sarita,
+	            zoom: 12
+	        });
+
+	        // This event listener calls addMarker() when the map is clicked.
+		        google.maps.event.addListener(map, 'click', function(event) {
+		          addMarker(event.latLng, map);
+		        });
+
+		        // Add a marker at the center of the map.
+		        addMarker(bangalore, map);
+		      }
+	         // Adds a marker to the map.
+		      function addMarker(location, map) {
+		        // Add the marker at the clicked location, and add the next-available label
+		        // from the array of alphabetical characters.
+		        var marker = new google.maps.Marker({
+		          position: location,
+		          label: labels[labelIndex++ % labels.length],
+		          map: map
+		        });
+		      }
+
+		      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</head>
+<body>
+	<script type="text/javascript">
+		(function ($) {
+				  $(document).ready(function(){
+				    
+					// hide .navbar first
+					$(".navbar").hide();
+					
+					// fade in .navbar
+					$(function () {
+						$(window).scroll(function () {
+				            // set distance user needs to scroll before we fadeIn navbar
+							if ($(this).scrollTop() > 100) {
+								$('.navbar').fadeIn();
+							} else {
+								$('.navbar').fadeOut();
+							}
+						});
+
+					
+					});
+
+				});
+				  }(jQuery));
+	</script>
+	<div class="navbar_scroll">
+		<div class="container-fluid" id="nav">
+			<div class="row">
+				<div class="col-lg-2">
+					HITHYOGA
+				</div>
+				<div class="col-lg-10">
+					<ul>
+						<li>HOME</li>
+						<li>ABOUT US</li>
+						<li>SCHEDULE</li>
+						<li>RETREATS</li>
+						<li>WORKSHOPS</li>
+						<li>GALLERY</li>
+						<li>TESTIMONIALS</li>
+						<li>BLOG</li>
+						<li>CONTACT US</li>		
+					</ul>						
+				</div>		
+			</div>				
+		</div>
+	</div>
+	<nav class="navbar  navbar-fixed-top"  role="navigation">
+		<div class="container-fluid" style="padding:1%; font-weight:bold;">
+			<div class="row">
+				<div class="col-lg-2">
+					HITHYOGA
+				</div>
+				<div class="col-lg-10">
+					<ul ">
+						<li>HOME</li>
+						<li>ABOUT US</li>
+						<li>SCHEDULE</li>
+						<li>RETREATS</li>
+						<li>WORKSHOPS</li>
+						<li>GALLERY</li>
+						<li>TESTIMONIALS</li>
+						<li>BLOG</li>
+						<li>CONTACT US</li>		
+					</ul>						
+				</div>		
+			</div>				
+		</div>
+	</nav>
+	<div id="clients">
+		<div style="text-align:center; font-size:25px; font-weight:bold; padding-bottom:2%;">CLIENTS</div>
+		<div class="row">
+			<div class="col-lg-2" style="margin-top: -15px;">
+				<img src="img/hindustan-uniliver.png" class="img-responsive">
+			</div>
+			<div class="col-lg-2" style="margin-top: 17px;">
+				<img src="img/ge-healthcare.png" class="img-responsive">
+			</div>
+			<div class="col-lg-2" style="margin-top: 20px;">
+				<img src="img/br.png" class="img-responsive">
+			</div>
+			<div class="col-lg-2" style="margin-top: -20px;">
+				<img src="img/dish-tv.png" class="img-responsive">
+			</div>
+			<div class="col-lg-2" style="margin-top: -55px;">
+				<img src="img/th.png" class="img-responsive">
+			</div>
+			<div class="col-lg-2" style="margin-top: -40px;">
+				<img src="img/timesgroup.png" class="img-responsive">
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" style="padding-left:0px; padding-right:0px;">
+		<div id="classes" class="container-fluid"></div>
+		<button>Classes</button>
+		<h1 style="color:#fff; font-weight:bolder; padding-top:3%; text-align:center; letter-spacing:1.5px; word-spacing:3px;">CHOOSE YOUR CLASSES AND START YOUR TRAINING</h1>
+		<button id="viewclasses">VIEW CLASSES</button>
+	</div>
+	<div class="we_do">
+		<p>WHAT WE DO <span class="ques_mark">?</span></p>
+	</div>
+	<div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:2px;">
+		<div class="row" style="height:auto;">
+			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">
+				<img src="img/retreat.jpg" class="img-responsive" >
+			</div>
+			<div class="col-lg-6 content" style="padding-left:0px; padding-right:0px;">
+				<h2 class="content_para" style="color:#fff;"><span class="flaticon-buddhism2"></span>RETREAT</h2>
+				<p class="content_para">
+					We have designed Retreat to Help participant touch their inner self as they listen to their inner voice through a range of activities including Yoga (with breath works) meditation, adventure and team building activities.
+					<button class="viewmore">VIEW MORE</button>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:2px;">
+		<div class="row">			
+			<div class="col-lg-6 content" style="padding-left:0px; padding-right:0px;">
+				<h2 class="content_para" style="color:#fff;"><span class="flaticon-buddhism2"></span>CLASSES</h2>
+				<p class="content_para">
+					Join our class and start your journey to improve your holistic health (physical, mental and spiritual), each of our instructions and yoga batches have a different offering, so call us or explore more to find out the one that suits you best. 
+					<button class="viewmore">VIEW MORE</button>
+				</p>
+			</div>
+			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">
+				<img src="img/classes.jpg" class="img-responsive" >
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:2px;">
+		<div class="row">
+			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">
+				<img src="img/workshop1.jpg" class="img-responsive" >
+			</div>
+			<div class="col-lg-6 content" style="padding-left:0px; padding-right:0px;">
+				<h2 class="content_para" style="color:#fff;"><span class="flaticon-buddhism2"></span>WORKSHOPS</h2>
+				<p class="content_para">
+					Workshops are short term engagements designed to help you achieve specific objectives. It demands commitment and complete belief to attain the objective so that we could empower you in the journey. 
+					<button class="viewmore">VIEW MORE</button>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:2px;">
+		<div class="row">
+			
+			<div class="col-lg-6 content" style="padding-left:0px; padding-right:0px;">
+				<h2 class="content_para" style="color:#fff;"><span class="flaticon-buddhism2"></span>YOGA ON CALL</h2>
+				<p class="content_para">
+					One on session are premium service for individual who can't take out time from their busy schedule to drive to our studio or have multiple health issue that are difficult to be addressed in a regular group class.
+					<button class="viewmore">VIEW MORE</button>
+				</p>
+			</div>
+			<div class="col-lg-6" style="padding-left:0px; padding-right:0px;">
+				<img src="img/call.jpg" class="img-responsive" >
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" style="padding-left:0px; padding-right:0px; ">
+		<div id="contact_header">
+			<h3>CONTACT US</h3>
+		</div>
+		<div id="contact" class="container ">
+			<div class="col-lg-3">
+				<span class="fa fa-phone"></span>&nbsp; &nbsp;<span>+91-9650577578,&nbsp; 9810386937, &nbsp; 011-26940749</span>
+			</div>
+			<div class="col-lg-3">
+				<span class="fa fa-fax"></span>&nbsp; &nbsp;<span>011-26940749</span>
+			</div>
+			<div class="col-lg-3">
+				<span class="fa fa-envelope"></span>&nbsp; &nbsp;<span>hithyoga@gmail.com</span>
+			</div>
+			<div class="col-lg-3">
+				<span class="fa fa-map-marker"></span>&nbsp; &nbsp;<span>New Delhi</span>
+			</div>
+		</div>
+		<div id="map"></div>
+	</div>
+	<div id="footer">
+		<div class="row" style="font-size:25px;">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-2"><span class="fa fa-facebook-square"></span></div>
+			<div class="col-lg-2"><span class="fa fa-instagram"></span></div>
+			<div class="col-lg-2"><span class="fa fa-twitter-square"></span></div>
+			<div class="col-lg-2"><span class="fa fa-linkedin-square"></span></div>
+			<div class="col-lg-2"><span class="fa fa-google-plus-square"></span></div>
+			<div class="col-lg-1"></div>
+		</div>
+		<div style="text-align:center; padding-top:1%; font-weight:bold;">
+			<p>Copyright &copy; 2016. Hithyoga All rights reserved</p>
+		</div>
+		
+	</div>
+</body>
+</html>
