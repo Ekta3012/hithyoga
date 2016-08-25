@@ -22,6 +22,24 @@
 			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFuUZFW4QlYpXAXTQJAXanS9lVrFeCmGw&callback=initMap"></script>
 		<!--end-->
 		<link href="https://fonts.googleapis.com/css?family=Candal" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="css/example.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/background.cycle.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("body").backgroundCycle({
+                    imageUrls: [
+                        'img/classes.jpg',
+                        'img/classes1.jpg',
+                        'img/classes2.jpg'
+                    ],
+                    fadeSpeed: 2000,
+                    duration: 5000,
+                    backgroundSize: SCALING_MODE_COVER
+                });
+            });
+        </script>
 	<script>
 		var labels = 'Sarita Vihar';
       	var labelIndex = 0;
@@ -191,14 +209,14 @@
 				</div>
 				<div class="col-lg-10">
 					<ul class="ul_nav">
-						<li class="li_nav">HOME</li>
+						<li class="li_nav"><a href="homepage.html" style="color:#fff;">HOME</a></li>
 						<li class="li_nav">ABOUT US</li>
 						<li class="li_nav">SCHEDULE</li>
 						<li class="li_nav dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#fff;">RETREATS<span class="caret"></span></a>
 					        <ul class="dropdown-menu">
-					          <li><a href="#">Upcoming Retreats</a></li>
-					          <li><a href="#">Past Retreat</a></li>
+					          <li><a href="retreat_upcoming.html">Upcoming Retreats</a></li>
+					          <li><a href="retreat_past.html">Past Retreat</a></li>
 					        </ul>
 						</li>
 						<li class="li_nav">WORKSHOPS</li>
@@ -210,6 +228,36 @@
 				</div>		
 			</div>				
 		</div>
+		<!--<div class="jquery-script-ads" align="center">
+	        <script type="text/javascript"><!-
+	            google_ad_client = "ca-pub-2783044520727903";
+	            /* jQuery_demo */
+	            google_ad_slot = "2780937993";
+	            google_ad_width = 728;
+	            google_ad_height = 90;
+	            //-->
+	        <!--</script>
+	        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	    </div>
+	    <div class='centre-container'>
+	        
+	    </div>
+	    <script type="text/javascript">
+
+	      var _gaq = _gaq || [];
+	      _gaq.push(['_setAccount', 'UA-36251023-1']);
+	      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+	      _gaq.push(['_trackPageview']);
+
+	      (function() {
+	        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	      })();
+
+	    </script>-->
+        
+    </div>
 	</div>
 	<nav class="navbar  navbar-fixed-top"  role="navigation">
 		<div class="container-fluid" style="padding:1%; font-weight:bold;">
@@ -219,7 +267,7 @@
 				</div>
 				<div class="col-lg-10">
 					<ul class="ul_nav">
-						<li class="li_nav">HOME</li>
+						<li class="li_nav"><a href="homepage.html" style="color:#fff;">HOME</a></li>
 						<li class="li_nav">ABOUT US</li>
 						<li class="li_nav">SCHEDULE</li>
 						<li class="li_nav dropdown">
@@ -239,15 +287,12 @@
 			</div>				
 		</div>
 	</nav>
-	<div class="social">
-			<ul>
-				<li><a id="fbsocial" style="display:block;"><span class="fa fa-facebook-square"><span>Facebook</a></li>
-				<li><a id="instasocial" style="display:block;"><span class="fa fa-instagram" style="display:inline:"></span>Instagram</a></li>
-				<li><a id="twittersocial" style="display:block;"><span class="fa fa-twitter-square"></span>Twitter</a></li>
-				<li><a id="lisocial" style="display:block;"><span class="fa fa-linkedin-square"></span>LinkedIn</a></li>
-				<li><a id="gogglesocial" style="display:block;"><span class="fa fa-google-plus-square"></span>Google +</a></li>
-			</ul>
-			
+	<div class="social">			
+		<p><a id="fbsocial" style="display:block;"><span class="fa fa-facebook-square"><span>Facebook</a></p>
+		<p><a id="instasocial" style="display:block;"><span class="fa fa-instagram" style="display:inline:"></span>Instagram</a></p>
+		<p><a id="twittersocial" style="display:block;"><span class="fa fa-twitter-square"></span>Twitter</a></p>
+		<p><a id="lisocial" style="display:block;"><span class="fa fa-linkedin-square"></span>LinkedIn</a></p>
+		<p><a id="gogglesocial" style="display:block;"><span class="fa fa-google-plus-square"></span>Google +</a></p>
 	</div>
 	<div id="clients">
 		<div style="text-align:center; font-size:25px; font-weight:bold; padding-bottom:2%; font-family: 'Candal', sans-serif;">CLIENTS</div>
@@ -359,20 +404,17 @@
 		</div>
 		<div id="map"></div>
 	</div>
-	<div id="footer">
-		
+	<div id="footer">		
 			<ul style="font-size:25px; list-style:none; text-align:center;">
 			<li style="float:left; padding:20px;"><span class="fa fa-facebook-square"></span></li>
 			<li style="float:left; padding:20px;"><span class="fa fa-instagram"></span></li>
 			<li style="float:left; padding:20px;"><span class="fa fa-twitter-square"></span></li>
 			<li style="float:left; padding:20px;"><span class="fa fa-linkedin-square"></span></li>
 			<li style="float:left; padding:20px;"><span class="fa fa-google-plus-square"></span></li>
-			</ul>
-		
+			</ul>		
 		<div style="text-align:center; padding-top:1%; font-weight:bold;">
 			<p>Copyright &copy; 2016. Hithyoga All rights reserved</p>
-		</div>
-		
+		</div>		
 	</div>
 </body>
 </html>

@@ -20,7 +20,7 @@ body {
       margin-bottom: 0px;
       background-color: #fff;
 	  color: #383636;
-	  display: none;
+	 
   }
 .ul_nav{
 	list-style: none;
@@ -256,4 +256,22 @@ a{
 	text-decoration: none;
 	color: #5fc7ae;
 	font-weight: bold;
+}
+.more{
+	border-radius: 10px;
+	border:1px solid #5fc7ae ;
+	color:#5fc7ae ;
+	padding: 15px;
+	display: inline;
+	background-color:#fff;
+	margin-top: 2%;
+}
+.more:hover{
+	border-radius: 10px;
+	border: 1px solid #5fc7ae ;
+	background-color:#5fc7ae; 
+	color:#fff ;
+	padding: 15px;
+	display: inline;
+	margin-top: 2%;
 }

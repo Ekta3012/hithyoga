@@ -12,7 +12,12 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<!--end-->
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<!--stylesheet-->
+			<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<!--end-->
+		<!--fontawsome CDN-->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!--end-->
 </head>
 <body>
 	<div class="navbar_scroll" style="background-image:url('img/pastretreatbg.jpg'); opacity:0.7; height:600px;">
@@ -23,10 +28,16 @@
 				</div>
 				<div class="col-lg-10">
 					<ul class="ul_nav">
-						<li class="li_nav">HOME</li>
+						<li class="li_nav"><a href="homepage.html" style="color:#fff;">HOME</a></li>
 						<li class="li_nav">ABOUT US</li>
 						<li class="li_nav">SCHEDULE</li>
-						<li class="li_nav">RETREATS</li>
+						<li class="li_nav dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#fff;">RETREATS<span class="caret"></span></a>
+					        <ul class="dropdown-menu">
+					          <li><a href="retreat_upcoming.html">Upcoming Retreats</a></li>
+					          <li><a href="retreat_past.html">Past Retreat</a></li>
+					        </ul>
+						</li>
 						<li class="li_nav">WORKSHOPS</li>
 						<li class="li_nav">GALLERY</li>
 						<li class="li_nav">TESTIMONIALS</li>
@@ -40,7 +51,7 @@
 			<h1>OUR PAST RETREATS</h1>
 		</div>	
 	</div>
-	<nav class="navbar  navbar-fixed-top"  role="navigation">
+	<!--<nav class="navbar  navbar-fixed-top"  role="navigation">
 		<div class="container-fluid" style="padding:1%; font-weight:bold;">
 			<div class="row">
 				<div class="col-lg-2">
@@ -48,10 +59,16 @@
 				</div>
 				<div class="col-lg-10">
 					<ul class="ul_nav">
-						<li class="li_nav">HOME</li>
+						<li class="li_nav"><a href="homepage.html">HOME</a></li>
 						<li class="li_nav">ABOUT US</li>
 						<li class="li_nav">SCHEDULE</li>
-						<li class="li_nav">RETREATS</li>
+						<li class="li_nav dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">RETREATS<span class="caret"></span></a>
+					        <ul class="dropdown-menu">
+					          <li><a href="retreat_upcoming.html">Upcoming Retreats</a></li>
+					          <li><a href="retreat_past.html">Past Retreat</a></li>
+					        </ul>
+						</li>
 						<li class="li_nav">WORKSHOPS</li>
 						<li class="li_nav">GALLERY</li>
 						<li class="li_nav">TESTIMONIALS</li>
@@ -61,7 +78,7 @@
 				</div>		
 			</div>				
 		</div>
-	</nav>
+	</nav>-->
 	<div style="font-size:30px; background-color:#dcdcdc; text-align:center; padding:1%; color:#7e7e7e;">
 		RETREATS
 	</div>
@@ -117,5 +134,6 @@
 		<div style="text-align:center; padding-top:1%; font-weight:bold;">
 			<p>Copyright &copy; 2016. Hithyoga All rights reserved</p>
 		</div>
+	</div>
 </body>
 </html>

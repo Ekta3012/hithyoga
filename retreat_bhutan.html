@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<!--Boostrap CDN-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!--end-->
+		<!--stylesheet-->
+			<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<!--end-->
+		<!--fontawsome CDN-->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!--end-->
+		<script>
+			var labels = 'Bhutan';
+	      	var labelIndex = 0;
+		      function initMap() {
+
+			      	var Sarita= {lat: 27.5142, lng:90.4336};
+			        var mapDiv = document.getElementById('map');
+			        var map = new google.maps.Map(mapDiv, {
+			            center: Sarita,
+			            zoom: 12
+			        });
+
+			        // This event listener calls addMarker() when the map is clicked.
+			        google.maps.event.addListener(map, 'click', function(event) {
+			          addMarker(event.latLng, map);
+			        });
+
+			        // Add a marker at the center of the map.
+			        addMarker(Bhutan, map);
+				}
+		         // Adds a marker to the map.
+			      function addMarker(location, map) {
+			        // Add the marker at the clicked location, and add the next-available label
+			        // from the array of alphabetical characters.
+			        var marker = new google.maps.Marker({
+			          position: location,
+			          label: labels[labelIndex++ % labels.length],
+			          map: map
+			        });
+			      }
+
+			      google.maps.event.addDomListener(window, 'load', initialize);
+	    </script>
+		
+</head>
+<body>
+	<nav class="navbar  navbar-fixed-top"  role="navigation">
+		<div class="container-fluid" style="padding:1%; font-weight:bold;">
+			<div class="row">
+				<div class="col-lg-2">
+					HITHYOGA
+				</div>
+				<div class="col-lg-10">
+					<ul class="ul_nav">
+						<li class="li_nav"><a href="homepage.html">HOME</a></li>
+						<li class="li_nav">ABOUT US</li>
+						<li class="li_nav">SCHEDULE</li>
+						<li class="li_nav dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">RETREATS<span class="caret"></span></a>
+					        <ul class="dropdown-menu">
+					          <li><a href="retreat_upcoming.html">Upcoming Retreats</a></li>
+					          <li><a href="retreat_past.html">Past Retreat</a></li>
+					        </ul>
+						</li>
+						<li class="li_nav">WORKSHOPS</li>
+						<li class="li_nav">GALLERY</li>
+						<li class="li_nav">TESTIMONIALS</li>
+						<li class="li_nav">BLOG</li>
+						<li class="li_nav">CONTACT US</li>		
+					</ul>						
+				</div>		
+			</div>				
+		</div>
+	</nav>
+	<div style="font-size:20px; background-color:#dcdcdc; text-align:center; padding:1%; color:#7e7e7e; margin-top:4%;">
+		<span class="fa fa-backward"></span> <a href="retreat_upcoming.html" style="color:#7e7e7e; text-decoration:none;s">BACK TO RETREATS</a> 
+	</div>
+	<div>
+		<h1 style="text-align:center;">HITH YOGA RETREAT - BHUTAN (6 DAYS)</h1>
+		<div class="retreat_detail container" style="padding:3%;">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-4" style="background-color:#5fc7ae; padding:2%; padding-left:0px; padding-right:0px;">
+				<ul style="list-style:none; font-weight:bold; color:#fff;">
+					<li>
+						<div class="row">
+							<div class="col-sm-6">
+								<span  class="fa fa-calendar"></span>
+							</div>
+							<div class="col-sm-6">
+								<p>Starts: 11 April 2017</p>
+								<p>Ends: 16 April 2017</p>
+							</div>
+						</div>
+					</li>
+					<hr style=" background-color: #fff; ">
+					<li>
+						<div class="row">
+							<div class="col-sm-6">
+								<span  class="fa fa-map-marker"></span>
+							</div>
+							<div class="col-sm-6">
+								<p>Bhutan</p>
+							</div>
+						</div>
+					</li>
+					<hr style=" background-color: #fff; ">
+					<li>
+						<div class="row">
+							<div class="col-sm-6">
+								<span class="fa fa-book"></span>
+							</div>
+							<div class="col-sm-6">
+								<p>Instructor: Gaurav <br> Hitanshi</p>
+								
+							</div>
+						</div>
+					</li>
+					<hr style=" background-color: #fff; ">
+					<li>
+						<div class="row">
+							<div class="col-sm-6">
+								<span class="fa fa-users"></span>
+							</div>
+							<div class="col-sm-6">
+								<p>Group Size : 12</p>
+								
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="col-lg-4" style=" padding-left:0px; padding-right:0px;">
+				<div id="map" style="width:400px; height: 366.69px;"></div>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+			<div class="container" >
+				<p>
+				You are invited to join Hith Yoga's enhanced holiday experience in Bhutan, with uniqueness of yoga, meditation and mindfulness. Soak Yourself into the culture of Bhutan. This retreat is going to be a complete transformation of your vacation experience as you blend the concepts of happiness (Bhutan) with peace (yoga). As they say, you visit Bhutan only once, so why not enhance this experience and cherish it for a life time. It will surely make an intoxicating experience that will be a super set of richness mirroring Bhutan, yoga, meditation, adventure and fun filled activities. Bhutan - Nature's Beauty, Yoga/Meditation, Culture, Architecture and Adventure: Throughout your journey, you’ll experience the natural beauty and high spiritual energy of this small kingdom nestled in the Himalayas. Bhutan provides some of ideal places to do Yoga and Meditation activities; experience subtle changes in your own energy fields as you practice yoga and meditation with 300 degree view of the majestic Himalayas, inside holy & peaceful monasteries, by the side of the pristine rivers and streams or in seclusion inside dense forests. In Bhutan, Culture and Buddhism go hand-in-hand; you see its influence in various aspects of life. Hundreds of sacred monasteries, stupas, religious institutions, fluttering prayer flags and spinning prayer wheels make Buddhism a faith that is still alive. Modern Bhutanese culture derives from ancient culture and had relied on its geographic isolation to protect itself from outside cultural influences (Bhutan had opened its doors to the outside world just about 40 years ago). Feel the difference for yourself as you tour this country with plethora of perceptive changing experiences. Soak yourself totally as you hike to an 8th century meditation cave (later converted to a monastery), or a 13th century monastery (where monks study the religious texts), or while you walk through the rice fields to see splendid example of Bhutan’s fine architectural and artistic traditions; and the list can go on. Garnish the whole experience with twists of adventure and sports activities.
+			</p>
+			</div>			
+		</div>
+	</div>
+	<div style="text-align:center;">
+		<button class="more">To Know More Call Us</button>
+		<button class="more">Enroll Soon For Early Bird Discount</button>
+	</div>
+	<div id="footer">
+		
+			<ul style="font-size:25px; list-style:none; text-align:center;">
+			<li style="float:left; padding:20px;"><span class="fa fa-facebook-square"></span></li>
+			<li style="float:left; padding:20px;"><span class="fa fa-instagram"></span></li>
+			<li style="float:left; padding:20px;"><span class="fa fa-twitter-square"></span></li>
+			<li style="float:left; padding:20px;"><span class="fa fa-linkedin-square"></span></li>
+			<li style="float:left; padding:20px;"><span class="fa fa-google-plus-square"></span></li>
+			</ul>
+		
+		<div style="text-align:center; padding-top:1%; font-weight:bold;">
+			<p>Copyright &copy; 2016. Hithyoga All rights reserved</p>
+		</div>
+	</div>
+</body>
